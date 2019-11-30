@@ -16,7 +16,7 @@
             android:background="@color/fbutton_color_orange">
             <TextView
                 android:id="@+id/txt_toolbar_til"
-                android:text="Assignmet"
+                android:text="Quản lí thu chi"
                 android:textSize="20dp"
                 android:textColor="@android:color/white"
                 android:layout_width="wrap_content"
