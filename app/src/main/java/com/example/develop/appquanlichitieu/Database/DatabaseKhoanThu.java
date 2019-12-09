@@ -13,9 +13,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-/**
- * Created by Develop on 5/4/2018.
- */
 
 public class DatabaseKhoanThu  {
 
@@ -40,7 +37,7 @@ public class DatabaseKhoanThu  {
             "AND  strftime('%m',"+ CreateDatabase.TB_KHOANTHU_NGAY+") = strftime('%m',date('now'))";
 
 
-
+    //ContentValues là object xác định key value
     public long AddKhoanThu(KhoangThu khoangThu)
     {
         ContentValues contentValues=new ContentValues();

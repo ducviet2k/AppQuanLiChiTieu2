@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.example.develop.appquanlichitieu.TabPage.KhoanChiFragment;
 import com.example.develop.appquanlichitieu.TabPage.LoaiChiFragment;
 
+
 public class PageAdapterChi extends FragmentStatePagerAdapter {
 
 
@@ -18,17 +19,17 @@ public class PageAdapterChi extends FragmentStatePagerAdapter {
     public int getItemPosition(Object object) {
         return POSITION_NONE;
     }
-
+    //xét dữ liệu
     @Override
     public Fragment getItem(int position) {
         Fragment frag=null;
         switch (position){
             case 0:
-//                frag= new KhoanChiFragment();
+                frag= new KhoanChiFragment();
 
                 break;
             case 1:
-//                frag=new LoaiChiFragment();
+                frag=new LoaiChiFragment();
 
                 break;
 
@@ -38,9 +39,7 @@ public class PageAdapterChi extends FragmentStatePagerAdapter {
         return frag;
     }
 
-    /**
-     * Return the number of views available.
-     */
+
     @Override
     public int getCount() {
         return 2;
@@ -60,3 +59,4 @@ public class PageAdapterChi extends FragmentStatePagerAdapter {
         }
         return title;
     }
+}

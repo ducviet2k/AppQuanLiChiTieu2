@@ -15,12 +15,14 @@ import android.widget.Toast;
 import com.example.develop.appquanlichitieu.Database.DatabaseLoaiThu;
 import com.example.develop.appquanlichitieu.Model.LoaiThu;
 import com.example.develop.appquanlichitieu.R;
+import com.example.develop.appquanlichitieu.ViewHolder.LoaiThuAdapter;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import info.hoang8f.widget.FButton;
+
 
 public class LoaiThuFragment extends Fragment {
     RecyclerView recyclerView_LoaiThu;
@@ -30,7 +32,7 @@ public class LoaiThuFragment extends Fragment {
     MaterialEditText edtName;
     LoaiThu loaiThu;
     DatabaseLoaiThu databaseLoaiThu;
-//    LoaiThuAdapter adapter;
+    LoaiThuAdapter adapter;
     List<LoaiThu> listdata;
 
     RecyclerView.LayoutManager layoutManager;
@@ -48,7 +50,7 @@ public class LoaiThuFragment extends Fragment {
 
         databaseLoaiThu=new DatabaseLoaiThu(getContext());
 
-//        LoadDataLoaiThu();
+        LoadDataLoaiThu();
         btnFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,17 +94,20 @@ public class LoaiThuFragment extends Fragment {
         loaiThu=new LoaiThu(edtName.getText().toString());
         long chekc=databaseLoaiThu.AddItem(loaiThu);
         if(chekc>0){
-//            LoadDataLoaiThu();
+            LoadDataLoaiThu();
             Toast.makeText(getContext(), "Thêm Thành Công !", Toast.LENGTH_SHORT).show();
         }else {
             Toast.makeText(getContext(), "Thêm Thất Bại !!", Toast.LENGTH_SHORT).show();
         }
-    }}
+    }
 
-//    private void LoadDataLoaiThu() {
-//        listdata=databaseLoaiThu.getLoaiThu();
-//        adapter=new LoaiThuAdapter(listdata,getContext());
-//        recyclerView_LoaiThu.setAdapter(adapter);
-//        adapter.notifyDataSetChanged();
-//
-//    }
+    private void LoadDataLoaiThu() {
+        listdata=databaseLoaiThu.getLoaiThu();
+        adapter=new LoaiThuAdapter(listdata,getContext());
+        recyclerView_LoaiThu.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+
+    }
+
+
+}

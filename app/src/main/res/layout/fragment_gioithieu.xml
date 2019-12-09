@@ -6,10 +6,10 @@
 
     <TextView
         android:layout_centerInParent="true"
-        android:text="Hello friends"
+        android:text="Quản lí thu chi cá  nhân, tiền lương, tiền chi trong ngày, trong tháng, trong năm….Việc quản lí thu chi, lưu chữ các phí lấy vào và chi ra. App quản lí thu chi giúp cho bạn quán lí tiền một cách đễ dàng, nhanh gọn, không mất nhiều thời gian ghi nhớ, không nhầm lẫn. App quản lí quỹ tiền tiện lợi, đê sử dụng, có thể lưu được nhiều các khoản thu cùng lúc. Giúp người dùng không cần nhớ các khoản thu chi theo ngày, tuần, tháng, năm, hoặc không bị quên... "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="24dp"
         android:textColor="@android:color/black"
         android:padding="20dp"
         android:fontFamily="serif"

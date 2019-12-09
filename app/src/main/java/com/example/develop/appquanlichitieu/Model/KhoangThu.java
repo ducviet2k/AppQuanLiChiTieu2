@@ -1,5 +1,8 @@
 package com.example.develop.appquanlichitieu.Model;
 
+/**
+ * Created by Develop on 5/4/2018.
+ */
 
 public class KhoangThu {
     int Id;
