@@ -90,7 +90,7 @@ public class DatabaseKhoanChi {
             list.add(khoangChi);
             cursor.moveToNext();
         }
-    
+
         return list;
     }
 
