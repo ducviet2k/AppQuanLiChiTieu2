@@ -73,7 +73,7 @@ public class DatabaseKhoanChi {
         }
         return list;
     }
-//ss
+//
     public List<KhoangChi> getKhoangChiTheoNgayThangNam(String truyvan){
 
         List<KhoangChi> list=new ArrayList<>();
