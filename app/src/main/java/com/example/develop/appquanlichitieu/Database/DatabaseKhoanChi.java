@@ -71,7 +71,6 @@ public class DatabaseKhoanChi {
             list.add(khoangChi);
             cursor.moveToNext();
         }
-        //Log.d("checkNao", String.valueOf(list));
         return list;
     }
 
